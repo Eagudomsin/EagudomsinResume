@@ -1,10 +1,35 @@
+@keyframes menuClick {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: 180px;
+        opacity: 1;
+    }
+}
+
+@keyframes closeClick {
+    0% {
+        height: 180px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-body {
+html {
     scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -34,19 +59,52 @@ nav ul {
 }
 
 nav ul li {
-    margin: auto 25px;
+    margin: auto 20px;
     list-style: none;
+    padding: 10px;
+    transition: 0.3s;
 }
 
 nav ul li a {
     color: #fff;
 }
 
+nav ul li:hover {
+    background: #191C1D;
+    border-radius: 25px;
+}
+
+.close-btn {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    clip-path: circle(50%);
+    background: #649eb1dd;
+    z-index: 10;
+    transition: 0.1s;
+    display: none;
+}
+
+.menu:hover {
+    cursor: pointer;
+    background: #649eb1;
+}
+
+.menu img {
+    width: 60%;
+    margin: 20%;
+}
+
 .intro {
     position: absolute;
     bottom: 20%;
     text-align: center;
-    background: #ffffff65;
     width: 100%;
     color: #191C1D;
 }
@@ -59,8 +117,8 @@ nav ul li a {
 
 .intro h3 {
     padding: 20px;
-    width: 70%;
-    padding-left: 15%;
+    width: 60%;
+    padding-left: 20%;
     text-align: justify;
     letter-spacing: 0.75px;
 }
@@ -186,6 +244,20 @@ nav ul li a {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #2751a3;
+}
+
+.git {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: underline;
 }
 
 .contact h2 {
@@ -196,19 +268,16 @@ nav ul li a {
 
 .contact-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 20px 0 100px 0;
 }
 
-.contact-card {
-    display: flex;
-    justify-content: center;
-    width: 300px;
+.contact-card{
+    margin: 0 100px;
 }
 
 .contact-card img {
-    width: 30px;
-    margin-right: 20px;
+    width: 50px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -218,6 +287,14 @@ nav ul li a {
 
     .about {
         flex-wrap: wrap;
+    }
+
+    .intro {
+        background: #ffffff95
+    }
+
+    .intro h1 {
+        font-size: 2rem;
     }
     
     .profile {
@@ -277,18 +354,154 @@ nav ul li a {
         display: flex;
         justify-content: space-around;
         padding: 10px 0 50px 0;
-        flex-wrap: wrap;
     }
-    
+
     .contact-card {
-        display: flex;
-        justify-content: center;
-        width: 300px;
-        margin: 15px 0;
+        margin: 0 100px;
     }
     
     .contact-card img {
-        width: 30px;
-        margin-right: 20px;
+        width: 40px;
     }
+}
+
+@media only screen and (max-width: 450px) {
+    nav {
+        display: none;
+        top: 30px;
+        left: 30px;
+        width: 35%;
+        clip-path: initial;
+        padding: 40px 20px 20px 20px;
+        border-radius: 25px 0 0 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .close-btn:hover {
+        cursor: pointer;
+    }
+
+    .menu {
+        display: initial;
+    }
+
+    .intro {
+        background: #ffffffaa;
+        bottom: 30%;
+    }
+
+    .intro h1 {
+        font-size: 1.1rem;
+        padding: 20px;
+        letter-spacing: 0.2px;
+    }
+    
+    .intro h3 {
+        padding: 20px;
+        width: 80%;
+        padding-left: 10%;
+        letter-spacing: 0.25px;
+        font-size: 0.8rem;
+    }
+
+    .profile-box {
+        justify-content: space-between;
+        margin: 10px auto;
+        width: 92.5%;
+        line-height: 2rem;
+        font-size: 0.7rem;
+        letter-spacing: 0;
+    }
+
+    .about-container {
+        padding: 20px 0 10px 0;
+        text-align: center;
+    }
+    
+    .about-container h2 {
+        padding: 20px 10px 20px 10px;
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 30%;
+        max-width: 200px;
+        clip-path: circle(50%);
+        margin: 10px 0;
+    }
+     
+    .skill-card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 0 20px 12%;
+    }
+
+    .skill-card {
+        width: 45%;
+        margin: 15px 0;
+        font-size: 11px;
+    }
+
+    .skill-card img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .portfolio {
+        padding: 20px;
+    }
+    
+    .portfolio h2 {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    .portfolio-card {
+        width: 90%;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .portfolio-card h3 {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .portfolio-card p {
+        font-size: 0.8rem;
+        padding: 10px 20px 100px 20px;
+    }
+    
+    .button {
+        border-radius: 20px;
+        width: 80px;
+        font-size: 0.9rem;
+    }
+
+    .contact h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-card {
+        margin: 0 30px;
+    }
+
+    .contact-card img {
+        width: 30px;
+    }
+
 }

@@ -15,36 +15,40 @@
 </head>
 <body>
     <section class="home">
-        <nav>
+        <div class="menu">
+        <img src="Image/Hamburger_icon.svg.png" alt="togglemenu">
+        </div>
+        <nav class="nav">
+            <img src="https://s2.svgbox.net/materialui.svg?ic=close&color=ff0000" width="32" height="32" class="close-btn">
             <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
         <div class="intro">
             <h1>HELLO, MY NAME IS EAG UDOMSIN</h1>
-            <h3>I'm former structural engineer who interested in web development, so that I decided to learn about front-end developer skill and now, I'm looking forward to start new journey on front-end developer role. Please contact me for interview and employment. I will appreciate for your kindly opportunity.</h3>
+            <h3>I'm former structural engineer who interested in web development, so that I decided to learn about front-end developer skill and now, I'm looking forward to start new journey on front-end developer role. Please contact me for interview and employment. I will appreciate for your kind opportunity.</h3>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="profile about-container">
             <h2>PROFILE</h2>
             <img src="Image/profile.jpg" alt="profile picture" class="profile-img">
             <div class="profile-box">
                 <div class="profile-left">
-                    <p>CURRENT ADDRESS:</p>
+                    <p>ADDRESS:</p>
                     <p>HOMETOWN:</p>
                     <p>EDUCATION:</p>
                     <p>CONTACT NUMBER:</p>
                     <p>E-MAIL:</p>
                 </div>
                 <div class="profile-right">
-                    <p>Sukhumvit 101, Bangchak, Phrakhanong, Bangkok</p>
+                    <p>Sukhumvit101, Bangchak, Phrakhanong, Bangkok</p>
                     <p>Mueang Prachinburi District, Prachinburi</p>
-                    <p>Faculty of Civil Engineering, Chulalongkorn </p>
+                    <p>Faculty of Engineering, Chulalongkorn Univ.</p>
                     <p>087-484-8863</p>
                     <p>Eagudomsin@hotmail.com</p>
                 </div>
@@ -93,7 +97,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>PORTFOLIO</h2>
         <div class="portfolio-container">
             <div class="portfolio-card">
@@ -115,25 +119,23 @@
                 <a href="https://eagudomsin.github.io/EagudomsinWeather/"><div class="button">VIEW</div></a>
             </div>
         </div>
+        <div class="git"><h4><a href="https://github.com/Eagudomsin">And more in my Github</a></h4></div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>CONTACT</h2>
         <div class="contact-container">
-            <div class="contact-card" href="https://www.linkedin.com/in/eag-udomsin-292a661b1/">
+            <a class="contact-card" href="mailto:eagudomsin@hotmail.com">
                 <img src="https://s2.svgbox.net/materialui.svg?ic=email" alt="email">
-                <h4>Eagudomsin@hotmail.com</h4>
-            </div>
+            </a>
             <a class="contact-card" href="https://timeline.line.me/user/_ddtjSIkQvWbTiYnPlMon76LR4eih22c-Nvtpifg?utm_medium=windows&utm_source=desktop&utm_campaign=Profile">
                 <img src="https://s2.svgbox.net/social.svg?ic=line" alt="line">
-                <h4>Eag Udomsin</h4>
             </a>
             <a class="contact-card" href="https://www.linkedin.com/in/eag-udomsin-292a661b1/">
                 <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=27226d" alt="linkedin">
-                <h4>Eag Udomsin</h4>
             </a>
         </div>
     </section>
-    
+    <script src="script.js"></script>
 </body>
 </html>
