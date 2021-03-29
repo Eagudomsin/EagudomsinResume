@@ -15,3 +15,7 @@ closebtn.addEventListener("click", ()=> {
     navbar.style.animation = "closeClick 0.3s"
     closebtn.style.display = "none"
 })
+
+if (screen.width <= 360) {
+    document.querySelector(".profile-box").style.fontSize = "0.6rem"
+}
